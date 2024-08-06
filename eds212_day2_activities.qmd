@@ -1,0 +1,12 @@
+---
+title: "eds212-day2-tasks"
+author: "Stephen Carroll"
+format: html
+---
+
+```{r}
+library(tidyverse, palmerpenguins)
+
+
+```
+
