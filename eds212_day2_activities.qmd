@@ -2,6 +2,8 @@
 title: "eds212-day2-tasks"
 author: "Stephen Carroll"
 format: html
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r}
@@ -9,4 +11,36 @@ library(tidyverse, palmerpenguins)
 
 
 ```
+
+```{r}
+# create an expression ----
+fx <- expression(x^2)
+
+# evaluate at x = 3
+x = 3
+
+# find the deriv with respect to x ----
+dfdx <- D(expr = fx, name = "x")
+dfdx
+
+# Find the slope at x = 3 -----
+
+eval(dfdx)
+```
+
+```{r}
+# create an expression ----
+Pa <- expression(2 * (3 * a + 2)^4 - 5)
+
+# evaluate at a = 1.2----
+a = 1.2
+
+# find the deriv with respect to x ----
+dPdx <- D(expr = Pa, name = "a")
+dPdx
+
+# Find the slope at a = 1.2
+eval(dPdx)
+```
+
 
