@@ -43,4 +43,32 @@ dPdx
 eval(dPdx)
 ```
 
+```{r}
+library(palmerpenguins)
+data(package = "palmerpenguins")
+penguins <- penguins
+```
+
+```{r}
+ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
+geom_point()+
+  xlab("Bill length mm") +
+  ylab("Bill depth mm") +
+  ggtitle("Penguin bill length vs. depth")
+  
+
+```
+
+```{r}
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) +
+geom_jitter( aes(color = species))+
+  xlab("Species") +
+  ylab("Flipper length mm") +
+  ggtitle("Penguin flipper length by species") +
+  facet_wrap (~island) +
+  theme_minimal()
+```
+
+
+
 
