@@ -70,6 +70,20 @@ geom_jitter( aes(color = species))+
   theme_minimal()
 ```
 
+```{r}
+ggplot(data = penguins, aes(x = sex, y = body_mass_g)) +
+  geom_line( aes(color = species, lwd = 1))+
+  xlab("sex")+
+  ylab("body mass grams")+
+  ggtitle("body mass of differnet penguin species by sex")+
+  facet_wrap(~species)+
+  theme_bw()
+
+```
+
+```{r}
+penguins_raw <- penguins_raw
+```
 
 
 
